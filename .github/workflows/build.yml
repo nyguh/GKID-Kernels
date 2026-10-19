@@ -33,7 +33,7 @@ on:
 
       KERNEL_VERSION:
         description: "GKI LTS kernel line to build"
-        default: "All"
+        default: "6.12"
         type: choice
         options:
           - "All"
@@ -46,12 +46,12 @@ on:
       BUILD_VANILLA:
         description: "Build Vanilla (no KSU)"
         type: boolean
-        default: true
+        default: false
 
       BUILD_KSU:
         description: "Build with KernelSU"
         type: boolean
-        default: true
+        default: false
 
       BUILD_KSU_SUSFS:
         description: "Build with KernelSU and its forks + SUSFS"
@@ -76,7 +76,7 @@ on:
       NM:
         description: "Enable NoMount support"
         type: boolean
-        default: false
+        default: true
 
 env:
   MAN_DISABLE: true
